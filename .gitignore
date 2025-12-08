@@ -3,6 +3,10 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+# Guiding files
+AGENTS.md
+faseUno.md
+
 # dotenv files
 .env
 
