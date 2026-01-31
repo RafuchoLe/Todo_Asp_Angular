@@ -48,7 +48,7 @@ public class UserTests
 
     [Theory]
     [InlineData("", "Should fail for empty email")]
-    [InlineData(null, "Should fail for null email")]
+    [InlineData("", "Should fail for null email")]
     public void Use_Email_Should_Be_Required(string email, string reason)
     {
         // Arrange

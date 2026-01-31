@@ -3,6 +3,6 @@ namespace Toolbox.Core.Enums;
 public enum Priority
 {
     Low = 0,
-    Mediun = 1,
+    Medium = 1,
     High = 2
 }
