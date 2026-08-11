@@ -11,6 +11,7 @@ public class ToolboxDbContext : DbContext
 
     public DbSet<User> Users { get; set; } = null!;
     public DbSet<TodoItem> TodoItems { get; set; } = null!;
+    public DbSet<TodoAttachment> TodoAttachments { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

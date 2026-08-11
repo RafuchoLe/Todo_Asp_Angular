@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Toolbox.Infrastructure.Data;
 
@@ -10,9 +11,11 @@ using Toolbox.Infrastructure.Data;
 namespace Toolbox.Infrastructure.Migrations
 {
     [DbContext(typeof(ToolboxDbContext))]
-    partial class ToolboxDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260811094924_ExpandTodoItemWithAttachments")]
+    partial class ExpandTodoItemWithAttachments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");

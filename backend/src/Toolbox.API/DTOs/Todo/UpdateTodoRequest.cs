@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using Toolbox.Core.Enums;
 
-namespace Toolbox.Core.Entities;
+namespace Toolbox.API.DTOs.Todo;
 
-public class TodoItem : BaseEntity
+public class UpdateTodoRequest
 {
     [Required]
     [MaxLength(200)]
@@ -12,14 +12,9 @@ public class TodoItem : BaseEntity
     [MaxLength(1000)]
     public string? Description { get; set; }
 
-    public bool IsCompleted { get; set; } = false;
+    public bool IsCompleted { get; set; }
 
     public Priority Priority { get; set; } = Priority.Medium;
 
     public DateTime? DueDate { get; set; }
-
-    public Guid UserId { get; set; }
-    public User? User { get; set; } = null!;
-
-    public ICollection<TodoAttachment> Attachments { get; set; } = new List<TodoAttachment>();
 }

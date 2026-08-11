@@ -5,6 +5,7 @@ using System.Text;
 using Toolbox.Infrastructure.Data;
 using Toolbox.Infrastructure.Repositories;
 using Toolbox.Infrastructure.Identity;
+using Toolbox.Infrastructure.Services;
 using Toolbox.Core.Interfaces;
 using Toolbox.Core.Services;
 
@@ -25,6 +26,8 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
 // Services
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<JwtTokenGenerator>();
+builder.Services.AddScoped<ITodoService, TodoService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 // JWT Authentication
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
